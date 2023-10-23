@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div style="background-color: antiquewhite; height: 10vh; width: 90vw; margin: 10px; margin-left:15px; ">
+
+
+        <p style=" font-size:  36px; width: 40vw; margin-left: 400px; padding:10px">Weather Dashboard</p>
+
+    </div>
+    <div
+        style="background-color: antiquewhite; height: 60vh; width: 90vw; margin: 10px; margin-left:15px; display:flex">
+
+        <div style="background-color: aqua; height: 60vh; width: 20vw; margin:10px">
+
+            <div
+                style="background-color: rgb(47, 160, 160); height: 15vh; width: 18vw; margin:5px; display:flex; flex-direction: column; justify-content: space-around;">
+
+                <label style="font-size: 18px;">Search for a City:</label>
+                <input id='city' type="text" placeholder="San Diego" />
+                <button type="submit" id="search"
+                    style="background-color: rgba(0, 0, 255, 0.355); color: aliceblue;">Search</button>
+
+            </div>
+            <div style="background-color: rgb(47, 160, 160); height: 45vh; width: 18vw; margin:5px"></div>
+
+        </div>
+        <div style="background-color: aqua; height: 60vh; width: 70vw; margin:10px">
+            <div id="current" style="background-color: rgb(186, 66, 150); height: 20vh; width: 65vw; margin:5px; ">
+            </div>
+            <div style="background-color: rgb(47, 160, 160); height: 5vh; width: 65vw; margin:5px"></div>
+
+            <div id="days"
+                style="background-color: rgb(47, 160, 160); height: 35vh; width: 65vw; margin:5px; display:flex; flex-wrap: wrap; justify-content: space-around;">
+                <div style="background-color: rgb(75, 61, 164); height: 32vh; width: 12vw; margin:3px">1</div>
+                <div style="background-color: rgb(75, 61, 164); height: 32vh; width: 12vw; margin:3px">2</div>
+                <div style="background-color: rgb(75, 61, 164); height: 32vh; width: 12vw; margin:3px">3</div>
+                <div style="background-color: rgb(75, 61, 164); height: 32vh; width: 12vw; margin:3px">4</div>
+                <div style="background-color: rgb(75, 61, 164); height: 32vh; width: 12vw; margin:3px">5</div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./index.js"></script>
+
+</body>
+
+</html>
