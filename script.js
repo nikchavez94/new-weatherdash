@@ -17,3 +17,6 @@ function(){
     // Fetch weather data from the OpenWeatherMap API
     fetch(url).then(res=>res.json()).then(data => {console.log(data);
     
+    
+    var currentDate = new Date();    
+    currentDate = currentDate.toLocaleString().substring(0, 10);
