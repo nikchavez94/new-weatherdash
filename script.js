@@ -31,3 +31,36 @@ document.getElementById('current').innerHTML=`
 `
  // Set font size for current weather information
 document.getElementById('current').style.fontSize = '24px';
+
+// Filter the list to get data for 12:00:00 (noon) for the next 5 days
+
+var fiveDayArray = data.list.filter((item) => item.dt_txt.includes('12:00:00'));
+let daysCard = ''; 
+
+
+// Iterate through the filtered array to create cards for each day
+for (var i = 0; i < fiveDayArray.length; i++) {
+    var timeStamp = fiveDayArray[i].dt * 1000;
+    var date = new Date(timeStamp) .toLocaleDateString();
+    var icon = fiveDayArray[i].weather[0].icon;
+    var iconUrl = `http://openweathermap.org/img/wn/${icon}.png`;
+    
+    // Construct HTML for each day's weather card
+    
+    daysCard += `
+    <div>
+        <p>${date}</p>
+        <img src="${iconUrl}" alt="weather icon">
+        <ul>
+        <li>Humidity: ${fiveDayArray[i].main.humidity}</li>
+        <li>Temp: ${fiveDayArray[i].main.temp}</li>
+        <li>Wind Speed: ${fiveDayArray[i].wind.speed}</li>
+        </ul>
+        </div>
+    `
+        // Update the forecast container with the generated HTML
+            daysElement.innerHTML = daysCard;
+    }
+    })
+    
+    }
