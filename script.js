@@ -20,3 +20,14 @@ function(){
     
     var currentDate = new Date();    
     currentDate = currentDate.toLocaleString().substring(0, 10);
+
+    // Display current weather information
+document.getElementById('current').innerHTML=`
+<h3>${city}</h3>
+<p>${data.list[0].dt_txt}</p>
+<li>Humidity: ${data.list[0].main.humidity}</li>
+<li>Temp: ${data.list[0].main.temp}</li>
+<li>Wind Speed: ${data.list[0].wind.speed}</li>
+`
+ // Set font size for current weather information
+document.getElementById('current').style.fontSize = '24px';
